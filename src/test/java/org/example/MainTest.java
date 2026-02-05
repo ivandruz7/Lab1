@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
-    void transposition() {
+    void transposition3x3() {
 
         Main main = new Main();
 
@@ -21,7 +21,21 @@ class MainTest {
     }
 
     @Test
-    void bigSum() {
+    void transposition2x2() {
+
+        Main main = new Main();
+
+        char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
+        char[][] correct = {{'a', 'd'}, {'b', 'e'}};
+
+        char[][] result = main.transposition(matrixb);
+
+        assertArrayEquals(correct, result);
+
+    }
+
+    @Test
+    void bigSum3x3() {
 
         Main main = new Main();
 
@@ -30,5 +44,17 @@ class MainTest {
         int result = main.bigSum(matrixb);
 
         assertEquals(309, result);
+    }
+
+    @Test
+    void bigSum2x2() {
+
+        Main main = new Main();
+
+        char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
+
+        int result = main.bigSum(matrixb);
+
+        assertEquals(199, result);
     }
 }
