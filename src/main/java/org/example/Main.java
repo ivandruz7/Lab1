@@ -29,10 +29,12 @@ public class Main {
 
     public char[][] transposition(char[][] b){
 
-        char[][] c = new char[3][3];
+        int row = b.length;
+        int col = b[0].length;
+        char[][] c = new char[row][col];
 
-        for (int i = 0; i < 3; i++){
-            for (int j = 0; j < 3; j++){
+        for (int i = 0; i < row; i++){
+            for (int j = 0; j < col; j++){
                 c[j][i] = b[i][j];
             }
         }
@@ -42,27 +44,32 @@ public class Main {
 
     public int bigSum(char[][] c){
 
+        int row = c.length;
+        int col = c[0].length;
         char dd;
-        char[] sum = new char[3];
+        int sum = 0;
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < row; i++){
             dd = c[i][0];
-            for (int j = 0; j < 3; j++){
+            for (int j = 0; j < col; j++){
                 if (c[i][j] > dd) {
                     dd = c[i][j];
                 }
             }
-            sum[i] = dd;
+            sum += dd;
 
         }
-        return sum[0] + sum[1] + sum[2];
+        return sum;
     }
 
     public void printer(char[][] p){
 
-        for (int i = 0; i < 3 ; i++){
-            for (int j = 0; j < 3; j++){
-                if (j == 2){
+        int row = p.length;
+        int col = p[0].length;
+
+        for (int i = 0; i < row ; i++){
+            for (int j = 0; j < col; j++){
+                if (j == col - 1){
                     System.out.println(p[i][j] + " ");
                 }
                 else {
