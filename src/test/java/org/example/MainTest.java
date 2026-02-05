@@ -35,6 +35,20 @@ class MainTest {
     }
 
     @Test
+    void transposition2x3() {
+
+        Main main = new Main();
+
+        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
+        char[][] correct = {{'a', 'd'}, {'b', 'e'}, {'c', 'f'}};
+
+        char[][] result = main.transposition(matrixb);
+
+        assertArrayEquals(correct, result);
+
+    }
+
+    @Test
     void bigSum3x3() {
 
         Main main = new Main();
@@ -56,5 +70,17 @@ class MainTest {
         int result = main.bigSum(matrixb);
 
         assertEquals(199, result);
+    }
+
+    @Test
+    void bigSum2x3() {
+
+        Main main = new Main();
+
+        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
+
+        int result = main.bigSum(matrixb);
+
+        assertEquals(201, result);
     }
 }

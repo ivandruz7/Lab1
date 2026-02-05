@@ -11,6 +11,8 @@ public class Main {
         // кожно рядка матрці)
 
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
+        //char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
+        //char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
 
         System.out.println("Початкова матриця.");
         main.printer(matrixb);
@@ -31,7 +33,7 @@ public class Main {
 
         int row = b.length;
         int col = b[0].length;
-        char[][] c = new char[row][col];
+        char[][] c = new char[col][row];
 
         for (int i = 0; i < row; i++){
             for (int j = 0; j < col; j++){
