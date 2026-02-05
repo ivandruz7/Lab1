@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Початкова матриця.");
         main.printer(matrixb);
 
-        char[][] c = new char[3][3];
+        char[][] c;
         c = main.transposition(matrixb);
         System.out.println("Транспонована матриця.");
         main.printer(c);
@@ -55,8 +55,7 @@ public class Main {
             sum[i] = dd;
 
         }
-        int suum = sum[0] + sum[1] + sum[2];
-        return suum;
+        return sum[0] + sum[1] + sum[2];
     }
 
     public void printer(char[][] p){
