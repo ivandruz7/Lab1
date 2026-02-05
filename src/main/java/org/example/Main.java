@@ -6,14 +6,21 @@ public class Main {
 
         Main main = new Main();
 
+        //Номер моєї залкової книжки 5206 тоді С5 = 1 (транспонування матриці),
+        //С7 = 5 (тип змінних char), С11 = 3 (обчислитит суму найбільших елементів
+        // кожно рядка матрці)
+
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
 
+        System.out.println("Початкова матриця.");
         main.printer(matrixb);
 
         char[][] c = new char[3][3];
         c = main.transposition(matrixb);
+        System.out.println("Транспонована матриця.");
         main.printer(c);
 
+        System.out.println("Сума найбільших елементів кожного рядка.");
         System.out.println(main.bigSum(c));
 
 
@@ -33,7 +40,7 @@ public class Main {
         return c;
     }
 
-    public char bigSum(char[][] c){
+    public int bigSum(char[][] c){
 
         char dd;
         char[] sum = new char[3];
@@ -46,10 +53,9 @@ public class Main {
                 }
             }
             sum[i] = dd;
-            dd = 0;
 
         }
-        char suum = sum[0] + sum[1] +sum[2];
+        int suum = sum[0] + sum[1] + sum[2];
         return suum;
     }
 
