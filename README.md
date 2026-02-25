@@ -1,4 +1,6 @@
 [![Java CI with Maven](https://github.com/ivandruz7/Lab1/actions/workflows/maven.yml/badge.svg)](https://github.com/ivandruz7/Lab1/actions/workflows/maven.yml)
 
 
-Відео добавив в файли тому що сюди можна додати відео яке займає не більше 10 мб
+https://github.com/user-attachments/assets/0c08210d-9e67-4d38-b99d-4eedd97e5779
+
+
