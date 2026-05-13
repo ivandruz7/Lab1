@@ -4,58 +4,65 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class MatrixTest {
+
+    @Test
+    void constructorShouldThrowExceptionOnNull() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Matrix(null);
+        });
+    }
 
     @Test
     void transposition3x3() {
 
-        Main main = new Main();
-
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
         char[][] correct = {{'a', 'd', 'g'}, {'b', 'e', 'h'}, {'c', 'f', 'l'}};
 
-        char[][] result = main.transposition(matrixb);
+        Matrix matrix = new Matrix(matrixb);
 
-        assertArrayEquals(correct, result);
+        matrix.transposition();
+
+        assertArrayEquals(correct, matrix.getMatrix());
 
     }
 
     @Test
     void transposition2x2() {
 
-        Main main = new Main();
-
         char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
         char[][] correct = {{'a', 'd'}, {'b', 'e'}};
 
-        char[][] result = main.transposition(matrixb);
+        Matrix matrix = new Matrix(matrixb);
 
-        assertArrayEquals(correct, result);
+        matrix.transposition();
+
+        assertArrayEquals(correct, matrix.getMatrix());
 
     }
 
     @Test
     void transposition2x3() {
 
-        Main main = new Main();
-
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
         char[][] correct = {{'a', 'd'}, {'b', 'e'}, {'c', 'f'}};
 
-        char[][] result = main.transposition(matrixb);
+        Matrix matrix = new Matrix(matrixb);
 
-        assertArrayEquals(correct, result);
+        matrix.transposition();
+
+        assertArrayEquals(correct, matrix.getMatrix());
 
     }
 
     @Test
     void bigSum3x3() {
 
-        Main main = new Main();
-
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
 
-        int result = main.bigSum(matrixb);
+        Matrix matrix = new Matrix(matrixb);
+
+        int result = matrix.bigSum();
 
         assertEquals(309, result);
     }
@@ -63,11 +70,12 @@ class MainTest {
     @Test
     void bigSum2x2() {
 
-        Main main = new Main();
 
         char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
 
-        int result = main.bigSum(matrixb);
+        Matrix matrix = new Matrix(matrixb);
+
+        int result = matrix.bigSum();
 
         assertEquals(199, result);
     }
@@ -75,11 +83,11 @@ class MainTest {
     @Test
     void bigSum2x3() {
 
-        Main main = new Main();
-
         char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
 
-        int result = main.bigSum(matrixb);
+        Matrix matrix = new Matrix(matrixb);
+
+        int result = matrix.bigSum();
 
         assertEquals(201, result);
     }
