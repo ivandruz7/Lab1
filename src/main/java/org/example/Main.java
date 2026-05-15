@@ -8,8 +8,8 @@ public class Main {
         //С7 = 5 (тип змінних char), С11 = 3 (обчислитит суму найбільших елементів
         // кожно рядка матрці)
 
-        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
-//        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
+//        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'l'}};
+        char[][] matrixb = {{'a', 'b', 'c'}, {'d', 'e', 'f'}};
 //        char[][] matrixb = {{'a', 'b'}, {'d', 'e'}};
 
         Matrix matrix = new Matrix(matrixb);
