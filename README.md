@@ -4,5 +4,9 @@
 ІО-52 Друзь Іоан
 
 
-https://github.com/user-attachments/assets/fa56cc34-a631-488f-b759-916b95c4aba7
+
+
+https://github.com/user-attachments/assets/8df3462f-247b-4485-a8a3-56588bfceb40
+
+
 
